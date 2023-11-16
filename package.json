@@ -1,0 +1,25 @@
+{
+  "name": "jsar_exmaple_ultraman_seven",
+  "displayName": "UltramanSeven",
+  "version": "1.0.0",
+  "description": "Ultraman Seven",
+  "main": "main.xsml",
+  "scripts": {
+    "dev": "serve -p 4090 --cors"
+  },
+  "files": [
+    "icon.png",
+    "main.xsml",
+    "lib/*.ts",
+    "model/ultraman_seven_normal.glb"
+  ],
+  "icon3d": {
+    "base": "./model/ultraman_seven_normal.glb"
+  },
+  "author": "terrykingcha <terrykingcha@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@yodaos-jsar/types": "*",
+    "serve": "^14.2.1"
+  }
+}

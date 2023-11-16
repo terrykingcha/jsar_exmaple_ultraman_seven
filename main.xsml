@@ -1,0 +1,58 @@
+<xsml version="1.0">
+  <head>
+    <title>Ultraman Widget</title>
+    <link id="seven" rel="mesh" type="octstream/glb" href="./model/ultraman_seven_normal.glb" />
+    <style type="text/scss">
+      #seven {
+        x: 50;
+        y: 100;
+        z: 0;
+        scaling: 1 1 1;
+        rotation: 0 0 0;
+        animation: rotate 5s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          rotation: 0 0 0;
+        }
+
+        100% {
+          rotation: 0 360 0;
+        }
+      }
+
+      #gui {
+        z: 200;
+        rotation: 30 180 0;
+        animation: scaling 1s linear infinite;
+      }
+
+      @keyframes scaling {
+        0% {
+          scaling: 1 1 1;
+        }
+
+        50% {
+          scaling: 1.2 1.2 1.2;
+        }
+
+        100% {
+          scaling: 1 1 1;
+        }
+      }
+    </style>
+    <script src="./lib/main.ts"></script>
+  </head>
+  <space>
+    <mesh id="seven" ref="seven" selector="__root__" />
+    <plane id="gui" size="200">
+      <div id="root" style="width:100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+        <div class="button" style=" width: 500px; height: 500px; background-color: white; font-size: 300px; color: red;">
+          赞
+        </div>
+      </div>
+    </plane>
+  </space>
+</xsml>
+
